@@ -1,0 +1,62 @@
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(190, 239, 255);
+    height: 100dvh;
+}
+
+
+body {
+    display:grid;
+    grid-template-areas: 
+    'title title open'
+    'beats beats beats'
+    'scrub scrub scrub'
+    'previous playpause next'
+    'volume volume tumo';
+    grid-template-rows: 64px auto 32px auto 32px;
+    grid-template-columns: 33% auto 33%;
+    background-color: rgb(190, 239, 255);
+    width: 600px;
+    height: 600px;
+}
+
+#title {
+    color:azure;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: xx-large;
+    grid-area: title;
+}
+
+#beats {
+    grid-area: beats;
+}
+
+#open-input {
+    grid-area: open;
+}
+
+#scrub-input {
+    grid-area: scrub;
+}
+
+#previous-button {
+    grid-area: previous;
+}
+
+#playpause-button {
+    grid-area: playpause;
+}
+
+#next-button {
+    grid-area: next;
+}
+
+#volume-input {
+    grid-area: volume;
+}
+
+#tumo-logo {
+    grid-area: tumo;
+}
