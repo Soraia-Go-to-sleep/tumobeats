@@ -1,8 +1,13 @@
+* {
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
 html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(190, 239, 255);
+    background-color: rgb(2, 24, 32);
     height: 100dvh;
 }
 
@@ -17,28 +22,53 @@ body {
     'volume volume tumo';
     grid-template-rows: 64px auto 32px auto 32px;
     grid-template-columns: 33% auto 33%;
-    background-color: rgb(190, 239, 255);
+    background-color: rgb(113, 181, 204);
     width: 600px;
-    height: 600px;
+    height: 650px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+button:active {
+    scale: 0.9;
 }
 
 #title {
     color:azure;
-    font-family: 'Courier New', Courier, monospace;
     font-size: xx-large;
     grid-area: title;
 }
 
 #beats {
     grid-area: beats;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #open-input {
     grid-area: open;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#file-input {
+    position: absolute;
+    opacity: 0;
+    inset: 0;
 }
 
 #scrub-input {
+    display: flex;
     grid-area: scrub;
+    position: relative;
 }
 
 #previous-button {
@@ -49,14 +79,39 @@ body {
     grid-area: playpause;
 }
 
+#icon-play {
+
+}
+
+#icon-pause {
+    display: none;
+}
+
 #next-button {
     grid-area: next;
 }
 
 #volume-input {
+    display: flex;
     grid-area: volume;
+    position: relative;
 }
 
 #tumo-logo {
     grid-area: tumo;
+}
+
+.range-bar {
+    position: absolute;
+    inset: 0;
+    background-color: azure;
+    border-radius: 50px;
+    pointer-events: none;
+    transform: scaleX(0.5);
+    transform-origin: left;
+}
+
+input[type="range"] {
+    flex: 1;
+    opacity: 0;
 }
