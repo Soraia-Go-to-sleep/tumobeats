@@ -2,5 +2,37 @@
     {
         "title":"musica 1",
         "url": "audios/music01.mp3"
+    },
+        {
+        "title":"musica 2",
+        "url": "audios/music02.mp3"
+    },
+    {
+        "title":"musica 3",
+        "url": "audios/music03.mp3"
+    },
+    {
+        "title":"musica 4",
+        "url": "audios/music04.mp3"
+    },
+    {
+        "title":"musica 5",
+        "url": "audios/music05.mp3"
+    },
+    {
+        "title":"musica 6",
+        "url": "audios/music06.mp3"
+    },
+    {
+        "title":"musica 7",
+        "url": "audios/music07.mp3"
+    },
+    {
+        "title":"musica 8",
+        "url": "audios/music08.mp3"
+    },
+    {
+        "title":"musica 9",
+        "url": "audios/music09.mp3"
     }
 ]
