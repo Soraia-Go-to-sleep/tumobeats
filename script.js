@@ -1,6 +1,8 @@
+
+
 window.onload = async function() {
 
-    //carregar o service worker
+    // carregar o service worker
     if ("serviceWorker" in navigator) {
         navigator.serviceWorker.register("service-worker.js");
     }
@@ -24,6 +26,9 @@ window.onload = async function() {
 
     let audio = document.querySelector("audio");
     let currentMusic = 0;
+    let pauseTime = 0;
+
+    let circle = document.querySelector("#circle")
   
 
 
@@ -49,7 +54,10 @@ window.onload = async function() {
 
     if(audio.paused) {
         playAudio();
+        audio.currentTime = pauseTime;
+        pauseTime = 0;
     } else {
+        pauseTime = audio.currentTime;
         pauseAudio();
     }
    }
@@ -107,12 +115,12 @@ window.onload = async function() {
     let playIcon = document.querySelector("#icon-play");
     let pauseIcon = document.querySelector("#icon-pause");
     playIcon.style.display = "none";
-    pauseIcon.style.display = "block";
+    pauseIcon.style.display = "initial";
    }
    audio.onpause = function() {
     let playIcon = document.querySelector("#icon-play");
     let pauseIcon = document.querySelector("#icon-pause");
-    playIcon.style.display = "block";
+    playIcon.style.display = "initial";
     pauseIcon.style.display = "none";
    }
    audio.ontimeupdate = function() {
@@ -122,10 +130,25 @@ window.onload = async function() {
     updateInputBar(value, bar);
    }
 
+   audio.onended = function() {
+    nextButton.click();     
+  }
+
    function scrubAudio(value) {
 
         if(!audio.src) return;
         audio.currentTime = audio.duration * (value / 100);
    }
+
+
+    window.onresize = function(){
+
+        let rect = circle.getBoundingClientRect()
+
+        console.log(rect);
+        circle.style.height = rect.width +"px"
+    }
+
+    window.onresize();
 
 }

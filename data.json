@@ -1,38 +1,38 @@
 [
     {
-        "title":"musica 1",
+        "title":"Viva la vida",
         "url": "audios/music01.mp3"
     },
         {
-        "title":"musica 2",
+        "title":"Heat Waves",
         "url": "audios/music02.mp3"
     },
     {
-        "title":"musica 3",
+        "title":"I Know What You Did Last Summer",
         "url": "audios/music03.mp3"
     },
     {
-        "title":"musica 4",
+        "title":"Dandelions",
         "url": "audios/music04.mp3"
     },
     {
-        "title":"musica 5",
+        "title":"Sailor Song",
         "url": "audios/music05.mp3"
     },
     {
-        "title":"musica 6",
+        "title":"Shut Up And Dance",
         "url": "audios/music06.mp3"
     },
     {
-        "title":"musica 7",
+        "title":"Writing on the walls",
         "url": "audios/music07.mp3"
     },
     {
-        "title":"musica 8",
+        "title":"Mesmerizer",
         "url": "audios/music08.mp3"
     },
     {
-        "title":"musica 9",
+        "title":"What Makes You Beautiful",
         "url": "audios/music09.mp3"
     }
 ]
